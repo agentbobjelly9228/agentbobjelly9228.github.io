@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms of Service — Outfit Maker: Closetly</title>
+    <meta name="description"
+        content="Terms of Service for Outfit Maker: Closetly — the rules and guidelines for using our AI outfit maker app." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Terms of Service — Outfit Maker: Closetly" />
+    <meta property="og:description"
+        content="Terms of Service for Outfit Maker: Closetly — the rules and guidelines for using our app." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/terms" />
+
+    <style>
+        :root {
+            --bg: #0b0c10;
+            --panel: #121319;
+            --accent: #7c5cff;
+            --accent-2: #22d3ee;
+            --text: #e6e8ee;
+            --muted: #a7adbb;
+            --ring: rgba(124, 92, 255, 0.6);
+            --ok: #19c37d;
+            --warn: #fbbf24;
+            --err: #ef4444;
+            --maxw: 1040px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+            color: var(--text);
+            background: radial-gradient(1200px 600px at 20% -10%, rgba(124, 92, 255, .15), transparent 40%),
+                radial-gradient(900px 500px at 90% 0%, rgba(34, 211, 238, .13), transparent 45%),
+                var(--bg);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent-2);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .skip {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 8px 12px;
+            background: var(--accent);
+            color: white;
+            border-radius: 10px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+            background: linear-gradient(180deg, rgba(11, 12, 16, .85), rgba(11, 12, 16, .55));
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            letter-spacing: .2px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            box-shadow: 0 0 0 4px rgba(124, 92, 255, .15);
+        }
+
+        nav a {
+            color: var(--text);
+            opacity: .85;
+            margin-left: 14px;
+            font-size: .95rem;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .hero {
+            padding: 56px 0 24px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 3.6vw, 3rem);
+            line-height: 1.15;
+            margin: 0 0 12px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            margin: 0 auto 18px;
+            max-width: 720px;
+        }
+
+        .cta {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            border-color: rgba(255, 255, 255, .18);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+            text-decoration: none;
+        }
+
+        .btn.primary {
+            background: linear-gradient(180deg, var(--accent), #5c3cff);
+            color: white;
+            border: none;
+            box-shadow: 0 20px 40px rgba(124, 92, 255, .35);
+        }
+
+        section {
+            padding: 26px 0;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            margin: 0 0 12px;
+            letter-spacing: .2px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+            margin-bottom: 16px;
+        }
+
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+        }
+
+        .card p {
+            margin: 0 0 12px;
+            color: var(--muted);
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(124, 92, 255, .15);
+            color: #ddd;
+            border: 1px solid rgba(124, 92, 255, .35);
+            font-size: .85rem;
+        }
+
+        .notice {
+            border-left: 4px solid var(--warn);
+            padding: 10px 12px;
+            background: rgba(251, 191, 36, .08);
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .success {
+            border-left-color: var(--ok);
+            background: rgba(25, 195, 125, .08);
+        }
+
+        .tiny {
+            font-size: .9rem;
+        }
+
+        footer {
+            margin-top: 32px;
+            padding: 32px 0 56px;
+            color: var(--muted);
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        ol,
+        ul {
+            margin: 0 0 12px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--muted);
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header>
+        <div class="container nav">
+            <div class="brand" aria-label="Closetly">
+                <div class="dot" aria-hidden="true"></div>
+                <span>Outfit Maker: Closetly</span>
+                <span class="pill" title="Terms of Service">Terms of Service</span>
+            </div>
+            <nav aria-label="Primary">
+                <a href="closetlysupport.html">Support</a>
+                <a href="closetlyprivacy.html">Privacy</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <section class="hero" aria-labelledby="title">
+            <h1 id="title">Terms of Service</h1>
+            <p>The rules and guidelines for using Outfit Maker: Closetly</p>
+            <div class="cta" role="group" aria-label="Primary actions">
+                <a class="btn primary" href="closetlysupport.html">Back to Support</a>
+            </div>
+        </section>
+
+        <section aria-labelledby="effective-date">
+            <div class="card">
+                <h3 id="effective-date">Effective Date</h3>
+                <p>These Terms of Service are effective as of <time datetime="2025-01-01">January 1, 2025</time>.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="acceptance-title">
+            <h2 class="section-title" id="acceptance-title">Acceptance of Terms</h2>
+
+            <div class="card">
+                <h3>By Using Our App</h3>
+                <p>By downloading, installing, or using Outfit Maker: Closetly ("Closetly," "the app," "we," "us," or
+                    "our"), you agree to be bound by these Terms of Service ("Terms").</p>
+                <p>If you do not agree to these Terms, you must not use the app.</p>
+            </div>
+
+            <div class="card">
+                <h3>Updates to Terms</h3>
+                <p>We may update these Terms from time to time. We will notify you of any material changes through the
+                    app or by email.</p>
+                <p>Your continued use of the app after such changes constitutes acceptance of the updated Terms.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="description-title">
+            <h2 class="section-title" id="description-title">Description of Service</h2>
+
+            <div class="card">
+                <h3>What Closetly Does</h3>
+                <p>Closetly is an AI-powered outfit maker app that allows you to:</p>
+                <ul>
+                    <li>Upload and organize photos of your clothing items</li>
+                    <li>Create and save outfit combinations</li>
+                    <li>Receive AI-generated style recommendations</li>
+                    <li>Generate try-on previews using AI technology</li>
+                    <li>Share your outfits with others</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Service Availability</h3>
+                <p>We strive to provide reliable service but cannot guarantee that the app will be available 100% of the
+                    time. We may temporarily suspend or discontinue the service for maintenance, updates, or other
+                    reasons.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="eligibility-title">
+            <h2 class="section-title" id="eligibility-title">Eligibility and Age Requirements</h2>
+
+            <div class="card">
+                <h3>Age Requirements</h3>
+                <p>You must be at least 13 years old to use Closetly. If you are under 18, you may only use the app with
+                    the consent and supervision of a parent or guardian.</p>
+                <p>By using the app, you represent that you meet these age requirements.</p>
+            </div>
+
+            <div class="card">
+                <h3>Account Responsibility</h3>
+                <p>You are responsible for maintaining the security of your account credentials and for all activities
+                    that occur under your account.</p>
+                <p>You must notify us immediately of any unauthorized use of your account.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="user-content-title">
+            <h2 class="section-title" id="user-content-title">User Content and Conduct</h2>
+
+            <div class="card">
+                <h3>Your Content</h3>
+                <p>You retain ownership of the content you upload to Closetly, including photos of your clothing and
+                    created outfits.</p>
+                <p>By uploading content, you grant us a limited license to use, store, and process your content to
+                    provide the app's services.</p>
+            </div>
+
+            <div class="card">
+                <h3>Acceptable Use</h3>
+                <p>You agree not to use the app to:</p>
+                <ul>
+                    <li>Upload content that is illegal, harmful, or violates others' rights</li>
+                    <li>Upload inappropriate or offensive images</li>
+                    <li>Attempt to reverse engineer or hack the app</li>
+                    <li>Use the app for commercial purposes without permission</li>
+                    <li>Violate any applicable laws or regulations</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Content Moderation</h3>
+                <p>We reserve the right to remove or restrict access to any content that violates these Terms or is
+                    otherwise objectionable.</p>
+                <p>We may also suspend or terminate accounts that repeatedly violate these Terms.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="ai-features-title">
+            <h2 class="section-title" id="ai-features-title">AI Features and Limitations</h2>
+
+            <div class="card">
+                <h3>AI-Generated Content</h3>
+                <p>Closetly uses artificial intelligence to provide outfit recommendations and try-on previews. These
+                    are generated suggestions and may not always be accurate or suitable.</p>
+                <p class="notice">Important: AI-generated try-on previews are for styling inspiration only and may not
+                    reflect exact fit, sizing, or appearance.</p>
+            </div>
+
+            <div class="card">
+                <h3>No Guarantees</h3>
+                <p>We do not guarantee the accuracy, quality, or appropriateness of AI-generated recommendations or
+                    previews.</p>
+                <p>You should use your own judgment when following AI suggestions and always verify fit and style with
+                    actual clothing items.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="intellectual-property-title">
+            <h2 class="section-title" id="intellectual-property-title">Intellectual Property</h2>
+
+            <div class="card">
+                <h3>Our Rights</h3>
+                <p>Closetly, including its software, design, and content, is owned by us and protected by intellectual
+                    property laws.</p>
+                <p>You may not copy, modify, distribute, or create derivative works based on our app without permission.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Your Rights</h3>
+                <p>You retain ownership of your uploaded content and created outfits.</p>
+                <p>You may share your outfits and content as you choose, subject to these Terms.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="privacy-title">
+            <h2 class="section-title" id="privacy-title">Privacy and Data</h2>
+
+            <div class="card">
+                <h3>Data Collection</h3>
+                <p>We collect and process your data as described in our <a href="closetlyprivacy.html">Privacy
+                        Policy</a>.</p>
+                <p>By using the app, you consent to our data practices as outlined in the Privacy Policy.</p>
+            </div>
+
+            <div class="card">
+                <h3>Data Security</h3>
+                <p>We implement appropriate security measures to protect your data, but no system is completely secure.
+                </p>
+                <p>You are responsible for protecting your device and account credentials.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="disclaimers-title">
+            <h2 class="section-title" id="disclaimers-title">Disclaimers and Limitations</h2>
+
+            <div class="card">
+                <h3>Service "As Is"</h3>
+                <p>Closetly is provided "as is" without warranties of any kind, either express or implied.</p>
+                <p>We do not warrant that the app will be error-free, secure, or meet your specific requirements.</p>
+            </div>
+
+            <div class="card">
+                <h3>Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special,
+                    or consequential damages arising from your use of the app.</p>
+                <p>Our total liability shall not exceed the amount you paid for the app, if any.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="termination-title">
+            <h2 class="section-title" id="termination-title">Termination</h2>
+
+            <div class="card">
+                <h3>Your Right to Stop</h3>
+                <p>You may stop using Closetly at any time by deleting the app from your device.</p>
+                <p>You may also delete your account through the app settings.</p>
+            </div>
+
+            <div class="card">
+                <h3>Our Right to Terminate</h3>
+                <p>We may suspend or terminate your access to the app if you violate these Terms or for other legitimate
+                    reasons.</p>
+                <p>Upon termination, your right to use the app ceases immediately.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="governing-law-title">
+            <h2 class="section-title" id="governing-law-title">Governing Law and Disputes</h2>
+
+            <div class="card">
+                <h3>Applicable Law</h3>
+                <p>These Terms are governed by the laws of the jurisdiction where we operate, without regard to conflict
+                    of law principles.</p>
+            </div>
+
+            <div class="card">
+                <h3>Dispute Resolution</h3>
+                <p>Any disputes arising from these Terms or your use of the app shall be resolved through binding
+                    arbitration or in the courts of our jurisdiction.</p>
+                <p>You agree to resolve disputes individually and waive any right to participate in class action
+                    lawsuits.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="miscellaneous-title">
+            <h2 class="section-title" id="miscellaneous-title">Miscellaneous</h2>
+
+            <div class="card">
+                <h3>Severability</h3>
+                <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue
+                    in full force and effect.</p>
+            </div>
+
+            <div class="card">
+                <h3>Entire Agreement</h3>
+                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and us
+                    regarding the app.</p>
+                <p>No other agreements or understandings, whether oral or written, shall modify these Terms.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="contact-title">
+            <h2 class="section-title" id="contact-title">Questions About Terms?</h2>
+
+            <div class="card">
+                <h3>Need Help Understanding?</h3>
+                <p>If you have questions about these Terms of Service, please review our <a
+                        href="closetlysupport.html">Support page</a> for self-service options.</p>
+                <p class="notice">For legal or terms-related inquiries, you can reach us through the support channels
+                    listed in our app.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container" style="padding:0;">
+                <div class="card">
+                    <div class="tiny">© <span id="year"></span> Closetly. All rights reserved. • <a
+                            href="closetlysupport.html">Support</a> • <a href="closetlyprivacy.html">Privacy</a></div>
+                    <div class="tiny muted" style="margin-top:6px">These terms of service are for informational purposes
+                        only and may be updated periodically.</div>
+                    <div class="tiny muted" style="margin-top:6px">Last updated: <time datetime="2025-01-01">January 1,
+                            2025</time></div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Set year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
