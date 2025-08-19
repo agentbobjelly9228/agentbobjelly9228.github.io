@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Outfit Maker: Closetly — App Support</title>
+  <meta name="description" content="Support for Outfit Maker: Closetly — upload your clothes, mix & match, get AI outfit ideas, and try looks on a look‑alike model. Help, FAQ, troubleshooting, and contact." />
+
+  <!-- Smart App Banner (replace YOUR_APP_ID) -->
+  <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Outfit Maker: Closetly — App Support" />
+  <meta property="og:description" content="Help, FAQ, troubleshooting and contact for Closetly — the AI outfit maker." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/support" />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #121319;
+      --accent: #7c5cff;
+      --accent-2: #22d3ee;
+      --text: #e6e8ee;
+      --muted: #a7adbb;
+      --ring: rgba(124, 92, 255, 0.6);
+      --ok: #19c37d;
+      --warn: #fbbf24;
+      --err: #ef4444;
+      --maxw: 1040px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.15), transparent 40%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(34,211,238,.13), transparent 45%),
+                  var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    .skip { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip:focus { position: static; width:auto; height:auto; padding:8px 12px; background: var(--accent); color:white; border-radius: 10px; }
+
+    header {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(11,12,16,.85), rgba(11,12,16,.55));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap: 12px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight: 700; letter-spacing:.2px; }
+    .dot { width:12px; height:12px; border-radius:50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 4px rgba(124,92,255,.15); }
+    nav a { color: var(--text); opacity:.85; margin-left: 14px; font-size: .95rem; }
+    nav a:hover { opacity:1; }
+
+    .hero { padding: 56px 0 24px; text-align: center; }
+    .hero h1 { font-size: clamp(1.8rem, 3.6vw, 3rem); line-height:1.15; margin: 0 0 12px; }
+    .hero p { color: var(--muted); margin: 0 auto 18px; max-width: 720px; }
+    .cta { display:flex; gap:12px; justify-content:center; flex-wrap: wrap; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius: 14px; border:1px solid rgba(255,255,255,.08); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); color: var(--text); font-weight:600; }
+    .btn:hover { border-color: rgba(255,255,255,.18); box-shadow: 0 10px 24px rgba(0,0,0,.25); text-decoration:none; }
+    .btn.primary { background: linear-gradient(180deg, var(--accent), #5c3cff); color: white; border: none; box-shadow: 0 20px 40px rgba(124,92,255,.35); }
+
+    section { padding: 26px 0; }
+    .section-title { font-size: 1.25rem; margin: 0 0 12px; letter-spacing:.2px; }
+    .muted { color: var(--muted); }
+
+    .grid { display:grid; gap:16px; grid-template-columns: repeat(12, 1fr); }
+    .card { grid-column: span 12; background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .feature { display:flex; gap:12px; align-items:flex-start; }
+    .icon { font-size: 1.5rem; line-height:1; }
+
+    .pill { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius: 999px; background: rgba(124,92,255,.15); color: #ddd; border:1px solid rgba(124,92,255,.35); font-size: .85rem; }
+
+    .step { display:flex; gap:14px; align-items:flex-start; }
+    .step .num { flex:0 0 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display:inline-flex; align-items:center; justify-content:center; font-weight:700; color:white; }
+
+    .placeholder {
+      width: 100%; min-height: 160px; border: 2px dashed rgba(255,255,255,.16); border-radius: 14px; display:grid; place-items:center; color: var(--muted);
+      background: repeating-linear-gradient(45deg, rgba(255,255,255,.02) 0, rgba(255,255,255,.02) 10px, rgba(255,255,255,.04) 10px, rgba(255,255,255,.04) 20px);
+    }
+
+    details { background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:14px 16px; }
+    details + details { margin-top: 10px; }
+    summary { cursor: pointer; font-weight:600; }
+
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace; font-size: .9rem; padding:2px 6px; border-radius:6px; border:1px solid rgba(255,255,255,.2); background: rgba(0,0,0,.35); }
+
+    .notice { border-left: 4px solid var(--warn); padding: 10px 12px; background: rgba(251, 191, 36, .08); border-radius: 8px; }
+    .success { border-left-color: var(--ok); background: rgba(25,195,125,.08); }
+
+    .two-col > .card { grid-column: span 12; }
+    @media (min-width: 760px) {
+      .two-col > .card { grid-column: span 6; }
+    }
+
+    footer { margin-top: 32px; padding: 32px 0 56px; color: var(--muted); border-top: 1px solid rgba(255,255,255,.08); }
+    .tiny { font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Closetly">
+        <div class="dot" aria-hidden="true"></div>
+        <span>Outfit Maker: Closetly</span>
+        <span class="pill" title="Support Page">App Support</span>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#get-started">Get Started</a>
+        <a href="#faq">FAQ</a>
+        <a href="#troubleshooting">Troubleshoot</a>
+        <a href="#billing">Billing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="title">
+      <h1 id="title">Closetly Support</h1>
+      <p>Your AI outfit maker. Upload your clothes, mix & match, get AI outfit recommendations, and try looks on a look‑alike model.</p>
+      <div class="cta" role="group" aria-label="Primary actions">
+        <a class="btn primary" href="#" id="download">Download on the App Store</a>
+        <a class="btn" href="#contact">Contact Support</a>
+      </div>
+      <p class="muted tiny" style="margin-top:10px">Looking for our <a href="#" id="privacy-link">Privacy Policy</a> or <a href="#" id="terms-link">Terms</a>? (link placeholders)</p>
+    </section>
+
+    <section id="overview" aria-labelledby="overview-title">
+      <h2 class="section-title" id="overview-title">What you can do</h2>
+      <div class="grid two-col">
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🧺</div>
+          <div>
+            <h3>Upload your wardrobe</h3>
+            <p>Photograph your tops, bottoms, shoes, and accessories to build a digital, limitless closet you can carry anywhere.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🧩</div>
+          <div>
+            <h3>Mix & match</h3>
+            <p>Drag, drop, and combine items to create outfits. Save favorites and share looks with friends.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🤖</div>
+          <div>
+            <h3>AI outfit ideas</h3>
+            <p>Get AI‑generated recommendations tailored to items you own and the vibe you want.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🪄</div>
+          <div>
+            <h3>Try‑on previews</h3>
+            <p>Upload a photo of yourself to see a look‑alike model wearing your selected pieces.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started" aria-labelledby="start-title">
+      <h2 class="section-title" id="start-title">Quick start</h2>
+      <div class="grid" style="gap: 18px;">
+        <div class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">1</div>
+            <div>
+              <h3>Add your clothes</h3>
+              <p>Open the app → <span class="kbd">Add Clothes</span> → snap a clear photo (good lighting helps). Repeat for tops, bottoms, shoes, and accessories.</p>
+              <div class="placeholder" aria-hidden="true">Screenshot placeholder: Add Clothes</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">2</div>
+            <div>
+              <h3>Create an outfit</h3>
+              <p>Go to <span class="kbd">Mix & Match</span>. Drag pieces onto the canvas and arrange them to your liking. Tap <span class="kbd">Save</span> to keep the look.</p>
+              <div class="placeholder" aria-hidden="true">Screenshot placeholder: Mix & Match</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">3</div>
+            <div>
+              <h3>Get AI recommendations</h3>
+              <p>From any item or outfit, choose <span class="kbd">AI Suggest</span> to generate coordinated looks. Refine by occasion or style.</p>
+              <div class="placeholder" aria-hidden="true">Screenshot placeholder: AI Suggest</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">4</div>
+            <div>
+              <h3>Try it on (preview)</h3>
+              <p>Open <span class="kbd">Try‑On</span> → upload a clear, front‑facing photo → select outfit → generate preview on a look‑alike model.</p>
+              <div class="notice tiny">Tip: Well‑lit, plain backgrounds work best. Avoid hats, heavy filters, or occluded faces.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="muted tiny" style="margin-top:8px">Note: Generated try‑ons are previews for styling inspiration and may not perfectly reflect fit, drape, or color under all lighting conditions.</p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 class="section-title" id="faq-title">FAQ</h2>
+      <details>
+        <summary>Which iOS versions and devices are supported?</summary>
+        <div class="muted">Requires an iPhone or iPad running a recent version of iOS/iPadOS. Performance varies by device. (Replace this line with your exact minimum supported version.)</div>
+      </details>
+      <details>
+        <summary>Do I need an account to use Closetly?</summary>
+        <div class="muted">You can start building a closet immediately. Some features (cloud backup, multi‑device sync, or try‑on processing) may require sign‑in. (Adjust to match your app.)</div>
+      </details>
+      <details>
+        <summary>Are my photos private?</summary>
+        <div class="muted">Photos you upload are used to provide the app’s features. Please review our <a href="#" id="privacy-link-2">Privacy Policy</a> for data handling details. Avoid uploading sensitive imagery.</div>
+      </details>
+      <details>
+        <summary>How do AI suggestions work?</summary>
+        <div class="muted">The app analyzes item categories, colors, and style cues to recommend pairings. You’re always in control—save, tweak, or dismiss suggestions.</div>
+      </details>
+      <details>
+        <summary>Can I export or share my outfits?</summary>
+        <div class="muted">Yes. From any saved look, use <span class="kbd">Share</span> to export or send to friends/social. (If different, update wording.)</div>
+      </details>
+    </section>
+
+    <section id="troubleshooting" aria-labelledby="tr-title">
+      <h2 class="section-title" id="tr-title">Troubleshooting</h2>
+      <div class="grid two-col">
+        <div class="card">
+          <h3>Uploads look cut off or messy</h3>
+          <ul class="muted">
+            <li>Shoot in bright, even lighting; avoid harsh shadows.</li>
+            <li>Use a plain background with clear contrast against the item.</li>
+            <li>Fill the frame but keep the entire item visible.</li>
+            <li>Retake photos if edges are clipped.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>AI suggestions feel off</h3>
+          <ul class="muted">
+            <li>Tag items (e.g., “casual”, “formal”, “streetwear”) to guide the model.</li>
+            <li>Provide more wardrobe variety; include shoes & accessories.</li>
+            <li>Regenerate with a different occasion or style prompt.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Try‑on isn’t accurate</h3>
+          <ul class="muted">
+            <li>Use a front‑facing photo with good lighting and a neutral pose.</li>
+            <li>Avoid hats, sunglasses, heavy filters, or motion blur.</li>
+            <li>Ensure outfit items are fully captured and well‑lit.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>App feels slow</h3>
+          <ul class="muted">
+            <li>Close background apps and free device storage.</li>
+            <li>Connect to a stable Wi‑Fi network.</li>
+            <li>Restart the app or your device to clear memory.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="notice tiny" style="margin-top:10px">Still stuck? Jump to <a href="#contact">Contact Support</a> with your app version, device model, iOS version, and steps to reproduce.</div>
+    </section>
+
+    <section id="billing" aria-labelledby="billing-title">
+      <h2 class="section-title" id="billing-title">Billing & subscriptions</h2>
+      <div class="grid two-col">
+        <div class="card">
+          <h3>Manage or cancel a subscription</h3>
+          <ol class="muted">
+            <li>On your iPhone/iPad, open <strong>Settings</strong> → tap your name → <strong>Subscriptions</strong>.</li>
+            <li>Find <em>Outfit Maker: Closetly</em> and choose <strong>Cancel</strong> or change plan.</li>
+          </ol>
+          <p class="tiny muted">Apple handles App Store subscriptions and refunds directly.</p>
+        </div>
+        <div class="card">
+          <h3>Restore purchases</h3>
+          <p class="muted">If you changed devices or reinstalled the app, open the app and tap <span class="kbd">Restore Purchases</span> (usually in Settings) while signed in with the same Apple ID.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Contact support</h2>
+      <div class="grid two-col">
+        <div class="card">
+          <h3>Email</h3>
+          <p class="muted">We’re here to help. Send us a note and we’ll get back to you.
+            <br>
+            <a class="btn" id="mailto" href="mailto:support@closetly.app?subject=Closetly%20Support%20Request&body=Please%20describe%20your%20issue%20and%20include%3A%0A-%20App%20version%3A%0A-%20Device%20model%3A%0A-%20iOS%20version%3A%0A-%20Steps%20to%20reproduce%3A%0A-%20Screenshots%20(if%20any)%3A">Email support@closetly.app</a>
+          </p>
+          <p class="tiny muted">Prefer a contact form? Replace the email button with your form URL.</p>
+        </div>
+        <div class="card">
+          <h3>What to include</h3>
+          <ul class="muted">
+            <li>App version (Settings → About in the app, if available)</li>
+            <li>Device model and iOS version</li>
+            <li>Clear description and steps to reproduce</li>
+            <li>Screenshots or screen recordings</li>
+          </ul>
+        </div>
+      </div>
+      <div class="notice success tiny" style="margin-top:10px">Heads up: Replace <strong>support@closetly.app</strong> with your real support email if different, and update the Privacy/Terms links above.</div>
+    </section>
+
+    <footer>
+      <div class="container" style="padding:0;">
+        <div class="grid" style="gap:14px;">
+          <div class="card" style="grid-column: span 12;">
+            <div class="tiny">© <span id="year"></span> Closetly. All rights reserved. • <a href="#" id="footer-privacy">Privacy</a> • <a href="#" id="footer-terms">Terms</a></div>
+            <div class="tiny muted" style="margin-top:6px">This support page is for informational purposes only. Generated previews are for inspiration and may not reflect exact sizing/fit. Always check brand size charts.</div>
+            <div class="tiny muted" style="margin-top:6px">Last updated: <time datetime="2025-08-19">August 19, 2025</time></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Set year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // OPTIONAL: If you know these URLs, set them once here
+    const APP_STORE_URL = '#'; // e.g., https://apps.apple.com/app/id1234567890
+    const PRIVACY_URL = '#';
+    const TERMS_URL = '#';
+
+    const download = document.getElementById('download');
+    const setLink = (el, url) => { if (url && url !== '#') { el.setAttribute('href', url); } };
+    setLink(download, APP_STORE_URL);
+    setLink(document.getElementById('privacy-link'), PRIVACY_URL);
+    setLink(document.getElementById('terms-link'), TERMS_URL);
+    setLink(document.getElementById('privacy-link-2'), PRIVACY_URL);
+    setLink(document.getElementById('footer-privacy'), PRIVACY_URL);
+    setLink(document.getElementById('footer-terms'), TERMS_URL);
+  </script>
+
+  <!-- Structured data: SoftwareApplication + ContactPoint (edit to match your details) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Outfit Maker: Closetly",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "iOS",
+    "url": "https://example.com/support",
+    "softwareVersion": "",
+    "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"},
+    "publisher": {"@type": "Organization", "name": "Closetly"},
+    "supportingData": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "support@closetly.app"
+    }
+  }
+  </script>
+</body>
+</html>
