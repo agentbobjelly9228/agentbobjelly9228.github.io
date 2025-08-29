@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Pull Ups: Training Program</title>
+    <meta name="description"
+        content="Privacy Policy for Pull Ups: Training Program — learn how we collect, use, and protect your data in our pull-up training app with guided programs, diagrams, rest timer, and badges." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Privacy Policy — Pull Ups: Training Program" />
+    <meta property="og:description"
+        content="Privacy Policy for Pull Ups: Training Program — what we collect, how we use it, and your choices." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/pull-ups-privacy" />
+
+    <style>
+        :root {
+            --bg: #0b0c10;
+            --panel: #121319;
+            --accent: #7c5cff;
+            --accent-2: #22d3ee;
+            --text: #e6e8ee;
+            --muted: #a7adbb;
+            --ring: rgba(124, 92, 255, 0.6);
+            --ok: #19c37d;
+            --warn: #fbbf24;
+            --err: #ef4444;
+            --maxw: 1040px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+            color: var(--text);
+            background: radial-gradient(1200px 600px at 20% -10%, rgba(124, 92, 255, .15), transparent 40%),
+                radial-gradient(900px 500px at 90% 0%, rgba(34, 211, 238, .13), transparent 45%),
+                var(--bg);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent-2);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .skip {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 8px 12px;
+            background: var(--accent);
+            color: white;
+            border-radius: 10px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+            background: linear-gradient(180deg, rgba(11, 12, 16, .85), rgba(11, 12, 16, .55));
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            letter-spacing: .2px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            box-shadow: 0 0 0 4px rgba(124, 92, 255, .15);
+        }
+
+        nav a {
+            color: var(--text);
+            opacity: .85;
+            margin-left: 14px;
+            font-size: .95rem;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .hero {
+            padding: 56px 0 24px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 3.6vw, 3rem);
+            line-height: 1.15;
+            margin: 0 0 12px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            margin: 0 auto 18px;
+            max-width: 720px;
+        }
+
+        .cta {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            border-color: rgba(255, 255, 255, .18);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+            text-decoration: none;
+        }
+
+        .btn.primary {
+            background: linear-gradient(180deg, var(--accent), #5c3cff);
+            color: white;
+            border: none;
+            box-shadow: 0 20px 40px rgba(124, 92, 255, .35);
+        }
+
+        section {
+            padding: 26px 0;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            margin: 0 0 12px;
+            letter-spacing: .2px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+            margin-bottom: 16px;
+        }
+
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+        }
+
+        .card p {
+            margin: 0 0 12px;
+            color: var(--muted);
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(124, 92, 255, .15);
+            color: #ddd;
+            border: 1px solid rgba(124, 92, 255, .35);
+            font-size: .85rem;
+        }
+
+        .notice {
+            border-left: 4px solid var(--warn);
+            padding: 10px 12px;
+            background: rgba(251, 191, 36, .08);
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .success {
+            border-left-color: var(--ok);
+            background: rgba(25, 195, 125, .08);
+        }
+
+        .tiny {
+            font-size: .9rem;
+        }
+
+        footer {
+            margin-top: 32px;
+            padding: 32px 0 56px;
+            color: var(--muted);
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header>
+        <div class="container nav">
+            <div class="brand" aria-label="Pull Ups: Training Program">
+                <div class="dot" aria-hidden="true"></div>
+                <span>Pull Ups: Training Program</span>
+                <span class="pill" title="Privacy Policy">Privacy Policy</span>
+            </div>
+            <nav aria-label="Primary">
+                <a href="pull-ups-support.html">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <section class="hero" aria-labelledby="title">
+            <h1 id="title">Privacy Policy</h1>
+            <p>How we collect, use, and protect your data when you use <strong>Pull Ups: Training Program</strong>.</p>
+            <div class="cta" role="group" aria-label="Primary actions">
+                <a class="btn primary" href="pullupsupport.html">Back to Support</a>
+            </div>
+        </section>
+
+        <section aria-labelledby="effective-date">
+            <div class="card">
+                <h3 id="effective-date">Effective Date</h3>
+                <p>This Privacy Policy is effective as of <time datetime="2025-01-01">January 1, 2025</time>.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="overview-title">
+            <h2 class="section-title" id="overview-title">Overview</h2>
+            <div class="card">
+                <h3>About Pull Ups: Training Program</h3>
+                <p><strong>Pull Ups: Training Program</strong> (“we,” “us,” or “our”) is a fitness app with 6 guided
+                    programs,
+                    clear exercise instructions and diagrams, a built-in rest timer, and achievement badges to help you
+                    stay consistent.</p>
+                <p>This Privacy Policy explains what information we collect, how we use it, and your choices. The app is
+                    designed
+                    to work <strong>without creating an account</strong> and stores most data <strong>on your
+                        device</strong>.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="collection-title">
+            <h2 class="section-title" id="collection-title">Information We Collect</h2>
+
+            <div class="card">
+                <h3>Information You Provide</h3>
+                <p><strong>Support Emails:</strong> If you email us, we receive your email address and the contents of
+                    your message.</p>
+                <p class="notice">We do <strong>not</strong> require an account and we do <strong>not</strong> collect
+                    workout logs or health data.</p>
+            </div>
+
+            <div class="card">
+                <h3>Information We Collect Automatically</h3>
+                <p><strong>Diagnostics:</strong> Crash reports and basic performance data may be collected to improve
+                    stability.</p>
+                <p><strong>Usage Analytics (optional):</strong> We may use privacy-friendly analytics to understand
+                    which screens are used,
+                    without storing personally identifying information. You can opt out where applicable in app
+                    settings.</p>
+                <p><strong>Device Data:</strong> Device model, OS version, and app version to help diagnose issues.</p>
+            </div>
+
+            <div class="card">
+                <h3>On-Device Storage</h3>
+                <p>Program progress markers and earned badges are stored on your device. If you delete the app, your
+                    locally stored
+                    data is removed from your device. Your device backups (e.g., iCloud/iTunes) may include this data
+                    under your control.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="use-title">
+            <h2 class="section-title" id="use-title">How We Use Your Information</h2>
+
+            <div class="card">
+                <h3>Primary Uses</h3>
+                <p><strong>Provide Core Features:</strong> Power the guided programs, show instructions/diagrams, and
+                    run the rest timer.</p>
+                <p><strong>App Quality:</strong> Improve performance, reliability, and usability based on diagnostics
+                    and (optional) analytics.</p>
+                <p><strong>Support:</strong> Respond to your inquiries when you contact us.</p>
+            </div>
+
+            <div class="card">
+                <h3>What We Do Not Do</h3>
+                <p>We do not sell your data. We do not collect precise location, contacts, photos, or microphone data.
+                    We do not
+                    track you across other companies’ apps or websites.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="sharing-title">
+            <h2 class="section-title" id="sharing-title">Information Sharing</h2>
+
+            <div class="card">
+                <h3>Service Providers</h3>
+                <p>We may use third-party providers (e.g., analytics, crash reporting) to operate and improve the app.
+                    These
+                    providers are permitted to process data only to perform services on our behalf and must protect it
+                    appropriately.</p>
+            </div>
+
+            <div class="card">
+                <h3>Legal Requirements</h3>
+                <p>We may disclose information if required by law or to protect our rights, users, or the public.</p>
+            </div>
+
+            <div class="card">
+                <h3>Business Transfers</h3>
+                <p>If we undergo a merger, acquisition, or asset sale, your information may be transferred as part of
+                    that transaction.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="permissions-title">
+            <h2 class="section-title" id="permissions-title">App Permissions</h2>
+
+            <div class="card">
+                <h3>Notifications & Haptics</h3>
+                <p>The rest timer can use notifications, sounds, or vibration/haptics. You can control these in the app
+                    settings
+                    and your device settings.</p>
+                <p class="notice">The app does <strong>not</strong> require access to your camera, photos, microphone,
+                    or location.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="security-title">
+            <h2 class="section-title" id="security-title">Data Security</h2>
+
+            <div class="card">
+                <h3>Protection Measures</h3>
+                <p>We implement appropriate technical and organizational measures to protect data we process (e.g.,
+                    encryption in transit,
+                    access controls, and periodic reviews). No method of electronic transmission or storage is 100%
+                    secure.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="retention-title">
+            <h2 class="section-title" id="retention-title">Data Retention</h2>
+
+            <div class="card">
+                <h3>How Long We Keep Data</h3>
+                <p>Locally stored program flags and badges remain on your device until you delete the app or reset data.
+                </p>
+                <p>Support emails are retained as needed to address your request and maintain records, unless you
+                    request deletion
+                    where applicable.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="rights-title">
+            <h2 class="section-title" id="rights-title">Your Rights and Choices</h2>
+
+            <div class="card">
+                <h3>Access & Deletion</h3>
+                <p>You can delete the app to remove on-device data. For any server-side data (e.g., support emails),
+                    contact us to request
+                    access or deletion, subject to legal obligations.</p>
+            </div>
+
+            <!-- <div class="card">
+                <h3>Opt-Outs</h3>
+                <p>If analytics are enabled, you can opt out in app settings (where available) or via your device’s
+                    privacy settings.</p>
+            </div> -->
+        </section>
+
+        <section aria-labelledby="children-title">
+            <h2 class="section-title" id="children-title">Children's Privacy</h2>
+
+            <div class="card">
+                <h3>Age Requirements</h3>
+                <p>This app is not intended for children under 13. We do not knowingly collect personal information from
+                    children under 13.
+                    If you believe a child provided us information, contact us to request deletion.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="international-title">
+            <h2 class="section-title" id="international-title">International Data Transfers</h2>
+
+            <div class="card">
+                <h3>Global Services</h3>
+                <p>Service providers used by the app may process data in other countries. Where applicable, we take
+                    steps to ensure
+                    adequate protection consistent with relevant laws.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="changes-title">
+            <h2 class="section-title" id="changes-title">Changes to This Policy</h2>
+
+            <div class="card">
+                <h3>Policy Updates</h3>
+                <p>We may update this Privacy Policy from time to time. Material changes will be communicated in-app or
+                    via other appropriate means.</p>
+                <p>Your continued use of the app after changes take effect constitutes acceptance of the updated policy.
+                </p>
+            </div>
+        </section>
+
+        <section aria-labelledby="contact-title">
+            <h2 class="section-title" id="contact-title">Contact Us</h2>
+
+            <div class="card">
+                <h3>Questions About Privacy?</h3>
+                <p>If you have questions about this Privacy Policy or our data practices, visit the <a
+                        href="pull-ups-support.html">Support page</a>
+                    or email us directly.</p>
+                <p class="notice">Email: <a
+                        href="mailto:agentbobjelly@gmail.com?subject=Privacy%20Question%20—%20Pull%20Ups%3A%20Training%20Program">agentbobjelly@gmail.com</a>
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container" style="padding:0;">
+                <div class="card">
+                    <div class="tiny">© <span id="year"></span> Pull Ups: Training Program. All rights reserved. •
+                        <a href="pullupsupport.html">Support</a>
+                    </div>
+                    <div class="tiny muted" style="margin-top:6px">
+                        This privacy policy is for informational purposes only and may be updated periodically.
+                    </div>
+                    <div class="tiny muted" style="margin-top:6px">
+                        Last updated: <time datetime="2025-01-01">January 1, 2025</time>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Set year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

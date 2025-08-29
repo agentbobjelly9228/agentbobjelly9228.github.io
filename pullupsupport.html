@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pull Ups: Training Program — App Support</title>
+
+  <!-- Meta -->
+  <meta name="description"
+    content="Support for Pull Ups: Training Program — 6 guided programs from first pull-up to weighted pull ups, archer pull ups, and muscle-ups. Clear instructions and diagrams, built-in rest timer, and achievement badges. Help, FAQ, and troubleshooting." />
+  <meta name="keywords"
+    content="Pull Ups,pull up training,weighted pull ups,archer pull ups,muscle ups,rest timer,progressions,calisthenics,streetlifting,fitness app" />
+
+  <!-- Smart App Banner (replace YOUR_APP_ID) -->
+  <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pull Ups: Training Program — App Support" />
+  <meta property="og:description"
+    content="Help, FAQ, and troubleshooting for Pull Ups: Training Program — guided pull-up progressions with diagrams, rest timers, and badges." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/support" />
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #121319;
+      --accent: #7c5cff;
+      --accent-2: #22d3ee;
+      --text: #e6e8ee;
+      --muted: #a7adbb;
+      --ring: rgba(124, 92, 255, 0.6);
+      --ok: #19c37d;
+      --warn: #fbbf24;
+      --err: #ef4444;
+      --maxw: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(124, 92, 255, .15), transparent 40%),
+        radial-gradient(900px 500px at 90% 0%, rgba(34, 211, 238, .13), transparent 45%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .skip:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: var(--accent);
+      color: white;
+      border-radius: 10px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(11, 12, 16, .85), rgba(11, 12, 16, .55));
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 4px rgba(124, 92, 255, .15);
+    }
+
+    nav a {
+      color: var(--text);
+      opacity: .85;
+      margin-left: 14px;
+      font-size: .95rem;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    .hero {
+      padding: 56px 0 24px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 3.6vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin: 0 auto 18px;
+      max-width: 720px;
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      border-color: rgba(255, 255, 255, .18);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+      text-decoration: none;
+    }
+
+    .btn.primary {
+      background: linear-gradient(180deg, var(--accent), #5c3cff);
+      color: white;
+      border: none;
+      box-shadow: 0 20px 40px rgba(124, 92, 255, .35);
+    }
+
+    section {
+      padding: 26px 0;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      margin: 0 0 12px;
+      letter-spacing: .2px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card {
+      grid-column: span 12;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .feature {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(124, 92, 255, .15);
+      color: #ddd;
+      border: 1px solid rgba(124, 92, 255, .35);
+      font-size: .85rem;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .step .num {
+      flex: 0 0 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+    }
+
+    details {
+      background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .02));
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    details+details {
+      margin-top: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
+      font-size: .9rem;
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      background: rgba(0, 0, 0, .35);
+    }
+
+    .notice {
+      border-left: 4px solid var(--warn);
+      padding: 10px 12px;
+      background: rgba(251, 191, 36, .08);
+      border-radius: 8px;
+    }
+
+    .success {
+      border-left-color: var(--ok);
+      background: rgba(25, 195, 125, .08);
+    }
+
+    .two-col>.card {
+      grid-column: span 12;
+    }
+
+    @media (min-width: 760px) {
+      .two-col>.card {
+        grid-column: span 6;
+      }
+    }
+
+    footer {
+      margin-top: 32px;
+      padding: 32px 0 56px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .tiny {
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Pull Ups: Training Program">
+        <div class="dot" aria-hidden="true"></div>
+        <span>Pull Ups: Training Program</span>
+        <span class="pill" title="Support Page">App Support</span>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#get-started">Get Started</a>
+        <a href="#faq">FAQ</a>
+        <a href="#troubleshooting">Troubleshoot</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="title">
+      <h1 id="title">Pull Ups: Training Program Support</h1>
+      <p>Guided pull-up progressions for every level—from your first strict rep to <strong>weighted pull ups</strong>,
+        <strong>archer pull ups</strong>, and <strong>muscle-ups</strong>. Clear instructions and diagrams, built-in
+        rest
+        timer, and achievement badges to keep you consistent.
+      </p>
+      <div class="cta" role="group" aria-label="Primary actions">
+        <a class="btn primary" href="#" id="download">Download on the App Store</a>
+        <a class="btn" href="mailto:agentbobjelly@gmail.com?subject=Pull Ups: Training Program Support Question">Email
+          Support</a>
+      </div>
+      <p class="muted tiny" style="margin-top:10px">Looking for our <a href="pullupprivacy.html">Privacy Policy</a>
+        <!-- or -->
+        <!-- <a href="pull-ups-terms.html">Terms</a>? -->?
+      </p>
+    </section>
+
+    <section id="overview" aria-labelledby="overview-title">
+      <h2 class="section-title" id="overview-title">What you can do</h2>
+      <div class="grid two-col">
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">💪</div>
+          <div>
+            <h3>Follow 6 Guided Programs</h3>
+            <p>Choose from: Zero → First Pull Up, Strict Foundation, Volume Builder, Weighted Pull Ups, Archer Pull Ups,
+              and the Muscle-Up Pathway.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">📖</div>
+          <div>
+            <h3>Clear Instructions & Diagrams</h3>
+            <p>Each exercise includes concise form cues and simple diagrams so you know exactly what to do.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">⏱️</div>
+          <div>
+            <h3>Built-In Rest Timer</h3>
+            <p>Use preset rest intervals with haptic/sound cues to keep your pacing on track between sets.</p>
+          </div>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🏅</div>
+          <div>
+            <h3>Achievement Badges</h3>
+            <p>Earn badges as you complete sessions within each program—stay motivated and consistent.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started" aria-labelledby="start-title">
+      <h2 class="section-title" id="start-title">Quick start</h2>
+      <div class="grid" style="gap: 18px;">
+        <div class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">1</div>
+            <div>
+              <h3>Pick your program</h3>
+              <p>Open the app → <span class="kbd">Programs</span> → select your level (e.g., <em>Zero → First Pull
+                  Up</em> or <em>Weighted Pull Ups</em>).</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">2</div>
+            <div>
+              <h3>Review today’s session</h3>
+              <p>Preview the exercise list. Tap any move to view <span class="kbd">Instructions & Diagram</span> with
+                key form cues and scaling tips.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">3</div>
+            <div>
+              <h3>Train with the rest timer</h3>
+              <p>Start your set, then use the built-in <span class="kbd">Rest Timer</span> between sets for consistent
+                pacing. Enable vibration/sound if desired.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">4</div>
+            <div>
+              <h3>Advance & earn badges</h3>
+              <p>Complete required sessions to progress through the program and unlock achievement badges along the way.
+              </p>
+              <div class="notice tiny">Tip: Always warm up your shoulders, elbows, and wrists before training. Progress
+                gradually if any movement feels painful.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="muted tiny" style="margin-top:8px">Note: The app provides general fitness guidance. Consult a qualified
+        professional before starting a new exercise program.</p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 class="section-title" id="faq-title">FAQ</h2>
+
+      <details>
+        <summary>Which iOS versions and devices are supported?</summary>
+        <div class="muted">Requires an iPhone or iPad running a recent version of iOS/iPadOS. (Replace this line with
+          your exact minimum supported version.)</div>
+      </details>
+
+      <details>
+        <summary>Do I need an account to use Pull Ups: Training Program?</summary>
+        <div class="muted">No account is required. You can start training immediately.</div>
+      </details>
+
+      
+
+      <details>
+        <summary>Are instructions beginner-friendly?</summary>
+        <div class="muted">Yes. Each movement includes concise form cues and diagrams, plus scaling options when
+          applicable.</div>
+      </details>
+
+      <details>
+        <summary>Is my data private?</summary>
+        <div class="muted">Yes. We do not collect any data from you. Please review our privacy policy if you have concerns.<a
+            href="pullupprivacy.html" id="privacy-link-2">Privacy Policy</a> for details.</div>
+      </details>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Need Help? Contact Us</h2>
+      <div class="card">
+        <p>Can't find what you're looking for? We're here to help!</p>
+        <p>Email us at <a
+            href="mailto:agentbobjelly@gmail.com?subject=Pull Ups: Training Program Support Question">agentbobjelly@gmail.com</a>
+          with any
+          questions, feedback, or issues you're experiencing.</p>
+        <p class="muted tiny">We typically respond within 24-48 hours during business days.</p>
+      </div>
+    </section>
+
+    <section id="troubleshooting" aria-labelledby="tr-title">
+      <h2 class="section-title" id="tr-title">Troubleshooting</h2>
+      <div class="grid two-col">
+        <!-- <div class="card">
+          <h3>Rest timer not vibrating or sounding</h3>
+          <ul class="muted">
+            <li>Check device mute switch and volume.</li>
+            <li>Ensure haptics/sounds are enabled in the app settings.</li>
+            <li>Disable Focus/Do Not Disturb if active.</li>
+          </ul>
+        </div> -->
+        <div class="card">
+          <h3>Instructions/diagrams not loading</h3>
+          <ul class="muted">
+            <li>Confirm you have an internet connection for initial content download.</li>
+            <li>Force-quit and relaunch the app.</li>
+            <li>Restart your device if the issue persists.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Badge didn’t unlock</h3>
+          <ul class="muted">
+            <li>Verify the session’s required steps were completed.</li>
+            <li>Return to the program home and refresh.</li>
+            <li>If still missing, contact support with the program and session name.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>App feels slow</h3>
+          <ul class="muted">
+            <li>Close background apps and ensure sufficient device storage.</li>
+            <li>Update to the latest app version.</li>
+            <li>Restart the app or your device to clear memory.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container" style="padding:0;">
+        <div class="grid" style="gap:14px;">
+          <div class="card" style="grid-column: span 12;">
+            <div class="tiny">© <span id="year"></span> Pull Ups: Training Program. All rights reserved. • <a
+                href="pullupprivacy.html">Privacy</a> </div>
+            <div class="tiny muted" style="margin-top:6px">This app provides general fitness guidance and is not a
+              substitute for professional medical advice. Train within your limits and consult a physician if needed.
+            </div>
+            <div class="tiny muted" style="margin-top:6px">Last updated: <time datetime="2025-08-19">August 19,
+                2025</time></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Set year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // OPTIONAL: If you know the App Store URL, set it here
+    const APP_STORE_URL = '#'; // e.g., https://apps.apple.com/app/id1234567890
+
+    const download = document.getElementById('download');
+    if (APP_STORE_URL && APP_STORE_URL !== '#') {
+      download.setAttribute('href', APP_STORE_URL);
+    }
+  </script>
+
+  <!-- Structured data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pull Ups: Training Program",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS",
+    "url": "https://example.com/support",
+    "softwareVersion": "",
+    "offers": {"@type": "Offer", "price": "", "priceCurrency": "USD"},
+    "publisher": {"@type": "Organization", "name": "Pull Ups: Training Program"},
+    "keywords": "Pull Ups,pull up training,weighted pull ups,archer pull ups,muscle ups,calisthenics"
+  }
+  </script>
+</body>
+
+</html>
