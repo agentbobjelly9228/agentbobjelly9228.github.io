@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support — Car Parking: Find My Car</title>
+    <meta name="description"
+        content="Official support site for Car Parking: Find My Car. Help, FAQs, and privacy information. All data stays on your device; location is used only to help you find your car." />
+    <meta property="og:title" content="Support — Car Parking: Find My Car" />
+    <meta property="og:description"
+        content="Help, FAQs, and privacy information. All data stays on your device; location is used only to help you find your car." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.example/support" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0c10;
+            --card: #111318;
+            --muted: #9aa3af;
+            --text: #e5e7eb;
+            --accent: #4f46e5;
+            /* indigo */
+            --ring: rgba(79, 70, 229, .35);
+            --ok: #22c55e;
+            --warn: #f59e0b;
+            --err: #ef4444;
+            --shadow: 0 12px 30px rgba(0, 0, 0, .35);
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            background: linear-gradient(180deg, #0b0c10 0%, #0d1117 100%);
+            color: var(--text);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 24px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(11, 12, 16, .7);
+            backdrop-filter: saturate(160%) blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+            z-index: 10
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700
+        }
+
+        .brand .logo {
+            width: 36px;
+            height: 36px;
+            display: grid;
+            place-items: center;
+            background: radial-gradient(120% 120% at 20% 20%, #6366f1 0%, #3940d8 40%, #1f244f 100%);
+            border-radius: 10px;
+            box-shadow: var(--shadow)
+        }
+
+        .nav a {
+            font-weight: 500;
+            opacity: .9
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: #121520;
+            box-shadow: var(--shadow)
+        }
+
+        .btn:hover {
+            border-color: rgba(255, 255, 255, .18)
+        }
+
+        .btn.primary {
+            background: linear-gradient(180deg, #6366f1, #4f46e5);
+            border: none;
+            color: white
+        }
+
+        .btn.ghost {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, .15)
+        }
+
+        .hero {
+            display: grid;
+            gap: 18px;
+            padding: 40px 0
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            margin: 0
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #141824;
+            border: 1px solid rgba(255, 255, 255, .08);
+            color: var(--muted);
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: .2px
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px
+        }
+
+        @media(min-width:860px) {
+            .grid.cols-2 {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow)
+        }
+
+        .card h3 {
+            margin: .2rem 0 0.6rem;
+            font-size: 1.1rem
+        }
+
+        .list {
+            margin: 0;
+            padding-left: 1.2rem
+        }
+
+        .list li {
+            margin: .35rem 0;
+            color: #cbd5e1
+        }
+
+        .kbd {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background: #0f1220;
+            border: 1px solid rgba(255, 255, 255, .08);
+            padding: 2px 6px;
+            border-radius: 6px
+        }
+
+        section {
+            scroll-margin-top: 80px
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding: 24px 0;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            color: var(--muted)
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .callout {
+            border-left: 4px solid var(--accent);
+            padding: 12px 14px;
+            background: #0f1220;
+            border-radius: 10px
+        }
+
+        .check {
+            color: var(--ok);
+            font-weight: 700
+        }
+
+        .warning {
+            color: var(--warn);
+            font-weight: 700
+        }
+
+        .error {
+            color: var(--err);
+            font-weight: 700
+        }
+
+        .sm {
+            font-size: .95rem
+        }
+
+        .tiny {
+            font-size: .85rem
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+        }
+
+        .spacer {
+            height: 18px
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #121624;
+            border: 1px solid rgba(255, 255, 255, .08);
+            color: #cbd5e1;
+            margin-right: 8px;
+            margin-top: 6px
+        }
+
+        .anchor {
+            display: inline;
+            opacity: .8;
+            margin-left: .25rem;
+            font-weight: 600
+        }
+
+        .anchor:hover {
+            text-decoration: underline
+        }
+    </style>
+
+    <!-- Optional structured data (FAQ) for SEO -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Do you collect my data?","acceptedAnswer":{"@type":"Answer","text":"No. All data is stored locally on your device. No personal data is collected, transmitted, or sold."}},
+      {"@type":"Question","name":"Why do you need my location?","acceptedAnswer":{"@type":"Answer","text":"Location is used only to save where you parked and to help you navigate back. We do not track location in the background or store it on servers."}},
+      {"@type":"Question","name":"Can I add photos and notes?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can attach a reference photo and add notes like floor, section, or landmarks. These stay on your device."}},
+      {"@type":"Question","name":"How do I delete my data?","acceptedAnswer":{"@type":"Answer","text":"You can delete saved spots within the app. You can also remove the app to delete all locally stored data."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <span>Car Parking: Find My Car — Support</span>
+            </div>
+            <nav class="navlinks tiny">
+                <a href="#get-started">Get Started</a>
+                <a href="carparkingprivacy.html">Privacy</a>
+                <a href="#permissions">Permissions</a>
+                <a href="#faq">FAQ</a>
+                <a class="btn ghost" href="mailto:agentbobjelly@gmail.com">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="tag">Official Help Center</span>
+            <h1>Support for <span class="anchor">Car Parking: Find My Car</span></h1>
+            <p class="muted sm">Simple, private, and reliable. Save your parking spot, add notes and a photo, and
+                navigate back when you’re ready. <strong>All data stays on your device.</strong></p>
+            <div class="grid cols-2">
+                <div class="card">
+                    <h3>Quick Links</h3>
+                    <p class="tiny muted">Replace the placeholders below with your actual App Store link & support
+                        email.</p>
+                    <p>
+                        <a class="btn primary" href="https://apps.apple.com/app/idXXXXXXXXX" target="_blank"
+                            rel="noopener">View on the App Store</a>
+                        <a class="btn" href="mailto:agentbobjelly@gmail.com">Email Support</a>
+                    </p>
+                    <p class="tiny mono">App Version: 1.0.0 · Last updated: September 3, 2025</p>
+                </div>
+                <div class="card">
+                    <h3>At a Glance</h3>
+                    <ul class="list">
+                        <li>Save your parking location with one tap</li>
+                        <li>Add notes like <span class="kbd">Floor B2</span> or <span class="kbd">Section C</span></li>
+                        <li>Attach a quick reference photo</li>
+                        <li>Find your car with on‑device GPS guidance</li>
+                        <li>Works offline for saved spots (map routing may require internet)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="spacer"></section>
+        <section class="grid cols-2">
+            <div class="card">
+                <h3>Getting Started</h3>
+                <ol class="list">
+                    <li>Open the app after parking.</li>
+                    <li>Allow <strong>Location</strong> access when prompted (<em>While Using the App</em> on iOS).</li>
+                    <li>Tap <strong>Save Spot</strong> to store your current location.</li>
+                    <li>Add an optional <strong>note</strong> (level, section, landmark).</li>
+                    <li>Tap <strong>Photo</strong> to attach a quick reference image (optional).</li>
+                    <li>When ready to return, tap <strong>Find</strong> to navigate back.</li>
+                </ol>
+            </div>
+            <div class="card">
+                <h3>Accuracy Tips (iOS)</h3>
+                <ul class="list">
+                    <li>Ensure <strong>Precise Location</strong> is enabled: <span class="kbd">Settings → Privacy &amp;
+                            Security → Location Services → App → Precise Location</span></li>
+                    <li>Set location access to <strong>While Using the App</strong>.</li>
+                    <li>Step outdoors or near open areas for a faster GPS lock.</li>
+                    <li>Keep Low Power Mode off when saving a spot for best accuracy.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="privacy" class="spacer"></section>
+        <section class="card">
+            <h3>Privacy First</h3>
+            <div class="callout tiny">
+                <p><span class="check">No accounts. No analytics. No ads.</span> All information is stored locally on
+                    your device and never leaves it unless you choose to share it (e.g., exporting a photo from your
+                    library).</p>
+            </div>
+            <ul class="list">
+                <li><strong>Data Storage:</strong> Your saved spots, notes, and photos are stored <em>only on your
+                        device</em>.</li>
+                <li><strong>No Collection:</strong> We do not collect, transmit, sell, or share personal data.</li>
+                <li><strong>No Tracking:</strong> We do not track your location in the background.</li>
+                <li><strong>Deletion:</strong> Delete spots in‑app or uninstall the app to remove all local data.</li>
+            </ul>
+            <p class="tiny muted">For App Store disclosure: “Data Not Collected.” If these policies change, this page
+                will be updated before any release.</p>
+        </section>
+
+        <section id="permissions" class="spacer"></section>
+        <section class="grid cols-2">
+            <div class="card">
+                <h3>Permissions We Request</h3>
+                <ul class="list">
+                    <li><strong>Location (While Using the App):</strong> to save where you parked and guide you back. We
+                        never store or transmit your location to servers.</li>
+                    <li><strong>Camera / Photos (Optional):</strong> to attach a reference photo. Images remain on your
+                        device.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Troubleshooting</h3>
+                <ul class="list">
+                    <li><strong>Spot not saving?</strong> Check Location permissions and Precise Location are enabled.
+                    </li>
+                    <li><strong>Blue dot inaccurate?</strong> Move to an open area and wait a few seconds for GPS to
+                        settle.</li>
+                    <li><strong>Directions not opening?</strong> Ensure you have an internet connection for map routing.
+                    </li>
+                    <li><strong>Photo access denied?</strong> Allow Camera/Photos in <span class="kbd">Settings →
+                            Privacy</span>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="faq" class="spacer"></section>
+        <section class="card">
+            <h3>Frequently Asked Questions</h3>
+            <div class="grid">
+                <div>
+                    <p><strong>Do you collect my data?</strong><br><span class="muted">No. All data (spots, notes,
+                            photos) stays on your device.</span></p>
+                    <p><strong>
